@@ -134,7 +134,7 @@ estimatorForm?.addEventListener('submit', event => {
     <span class="estimate-range">${format(low)}–${format(high)}</span>
     <h3>Rough budget for ${rate.label}</h3>
     <ul>
-      <li>Based on approximately ${area} m²</li>
+      <li>Based on approximately ${area} sq</li>
       <li>Excludes GST unless confirmed in a formal quote</li>
       <li>Subject to plans, engineering, materials, access and site conditions</li>
     </ul>
