@@ -111,10 +111,10 @@ const estimatorForm = document.querySelector('#estimatorForm');
 const estimateResult = document.querySelector('#estimateResult');
 
 const estimatorRates = {
-  standard: { low: 78, high: 118, label: 'standard residential framing' },
-  prefab: { low: 58, high: 92, label: 'prefabricated frame installation' },
-  highend: { low: 120, high: 195, label: 'high-end stick framing' },
-  lockup: { low: 42, high: 76, label: 'lock-up carpentry' }
+  standard: { low: 28, high: 40, label: 'standard residential framing' },
+  prefab: { low: 20, high: 40, label: 'prefabricated frame installation' },
+  highend: { low: 40, high: 80, label: 'high-end stick framing' },
+  lockup: { low: 10, high: 15, label: 'lock-up carpentry' }
 };
 
 estimatorForm?.addEventListener('submit', event => {
