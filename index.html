@@ -1,36 +1,44 @@
 <!doctype html>
 <html lang="en-AU">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>JS Carpentry | Premium Timber Framing Melbourne</title>
-  <meta name="description" content="JS Carpentry provides timber framing, lock-up carpentry, prefabricated framing and high-end stick framing across Melbourne." />
-  <meta name="theme-color" content="#07111f" />
-  <link rel="manifest" href="site.webmanifest" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>JS Carpentry | Timber Framing Specialists Melbourne</title>
+  <meta name="description" content="JS Carpentry provides timber framing, lock-up carpentry, prefabricated framing and high-end stick framing across Melbourne.">
+  <meta name="theme-color" content="#07111f">
+  <meta property="og:title" content="JS Carpentry | Timber Framing Specialists">
+  <meta property="og:description" content="Precision framing and lock-up carpentry for Melbourne builders, developers and premium residential projects.">
+  <meta property="og:image" content="assets/images/project-1.jpeg">
+  <link rel="manifest" href="site.webmanifest">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
   <header class="site-header" id="top">
     <a class="brand" href="#top" aria-label="JS Carpentry home">
-      <img src="logo.jpeg" alt="JS Carpentry logo" />
+      <img src="assets/images/logo.jpeg" alt="JS Carpentry logo">
       <span>JS Carpentry</span>
     </a>
-    <button class="menu-button" aria-label="Open menu" aria-expanded="false">☰</button>
+    <button class="menu-button" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
     <nav class="nav" aria-label="Main navigation">
       <a href="#about">About</a>
       <a href="#services">Services</a>
       <a href="#projects">Projects</a>
+      <a href="#areas">Service areas</a>
       <a href="#contact">Contact</a>
       <a class="nav-cta" href="tel:0420170199">Call 0420 170 199</a>
     </nav>
   </header>
 
-  <main>
+  <main id="main">
     <section class="hero" aria-labelledby="hero-title">
-      <img class="hero-image" src="project-1.jpeg" alt="Premium architectural home project" />
+      <img class="hero-image" src="assets/images/project-1.jpeg" alt="Premium architectural home project">
       <div class="hero-overlay"></div>
       <div class="hero-content reveal">
         <p class="eyebrow">Melbourne timber framing specialists</p>
@@ -41,9 +49,19 @@
           <a class="button secondary" href="tel:0420170199">Call now</a>
         </div>
       </div>
-      <div class="hero-tags" aria-label="Key services">
-        <span>Timber framing</span><span>Lock-up</span><span>Prefab installation</span><span>High-end stick framing</span>
+      <div class="hero-tags">
+        <span>Timber framing</span>
+        <span>Lock-up</span>
+        <span>Prefab installation</span>
+        <span>High-end stick framing</span>
       </div>
+    </section>
+
+    <section class="stats section compact" aria-label="Business highlights">
+      <div class="stat reveal"><strong data-count="4">0</strong><span>Core services</span></div>
+      <div class="stat reveal"><strong data-count="100">0</strong><span>Quality focus</span><small>%</small></div>
+      <div class="stat reveal"><strong data-count="1">0</strong><span>Reliable team</span></div>
+      <div class="stat reveal"><strong data-count="7">0</strong><span>Days responsive</span></div>
     </section>
 
     <section class="intro section" id="about">
@@ -67,10 +85,22 @@
         <h2>Specialist framing from structure to lock-up.</h2>
       </div>
       <div class="service-grid">
-        <article class="service-card reveal"><span>01</span><h3>Timber Framing</h3><p>Complete wall, floor and roof framing for new homes, townhouses and residential developments.</p></article>
-        <article class="service-card reveal"><span>02</span><h3>Lock-Up Carpentry</h3><p>Professional lock-up works completed efficiently to protect the build and maintain programme momentum.</p></article>
-        <article class="service-card reveal"><span>03</span><h3>Prefabricated Framing</h3><p>Accurate installation of prefabricated wall frames and roof trusses for fast, organised construction.</p></article>
-        <article class="service-card reveal"><span>04</span><h3>High-End Stick Framing</h3><p>Custom framing for architecturally designed homes, complex details and premium residential projects.</p></article>
+        <article class="service-card reveal">
+          <span>01</span><h3>Timber Framing</h3>
+          <p>Complete wall, floor and roof framing for new homes, townhouses and residential developments.</p>
+        </article>
+        <article class="service-card reveal">
+          <span>02</span><h3>Lock-Up Carpentry</h3>
+          <p>Professional lock-up works completed efficiently to protect the build and maintain programme momentum.</p>
+        </article>
+        <article class="service-card reveal">
+          <span>03</span><h3>Prefabricated Framing</h3>
+          <p>Accurate installation of prefabricated wall frames and roof trusses for fast, organised construction.</p>
+        </article>
+        <article class="service-card reveal">
+          <span>04</span><h3>High-End Stick Framing</h3>
+          <p>Custom framing for architecturally designed homes, complex details and premium residential projects.</p>
+        </article>
       </div>
     </section>
 
@@ -81,17 +111,30 @@
       </div>
       <div class="gallery">
         <button class="project project-wide reveal" data-image="assets/images/project-1.jpeg" aria-label="Open luxury residence project image">
-          <img src="project-1.jpeg" alt="Completed luxury residence" />
+          <img src="assets/images/project-1.jpeg" alt="Completed luxury residence">
           <span><strong>Luxury Residence</strong><small>Architectural residential project</small></span>
         </button>
         <button class="project reveal" data-image="assets/images/project-2.jpeg" aria-label="Open framing project image">
-          <img src="project-2.jpeg" alt="Large timber framing project viewed from above" />
+          <img src="assets/images/project-2.jpeg" alt="Large timber framing project viewed from above">
           <span><strong>Custom Timber Frame</strong><small>Large-scale residential framing</small></span>
         </button>
         <button class="project reveal" data-image="assets/images/project-3.jpeg" aria-label="Open stick framing project image">
-          <img src="project-3.jpeg" alt="Detailed timber roof and wall framing" />
+          <img src="assets/images/project-3.jpeg" alt="Detailed timber roof and wall framing">
           <span><strong>Complex Stick Framing</strong><small>Detailed roof structure</small></span>
         </button>
+      </div>
+    </section>
+
+    <section class="process section">
+      <div class="section-heading reveal">
+        <p class="eyebrow">How we work</p>
+        <h2>Clear from first call to completion.</h2>
+      </div>
+      <div class="process-grid">
+        <article class="reveal"><span>01</span><h3>Send plans</h3><p>Email your plans, project location and intended start date.</p></article>
+        <article class="reveal"><span>02</span><h3>Scope review</h3><p>We review the framing scope, access and programme requirements.</p></article>
+        <article class="reveal"><span>03</span><h3>Quote & schedule</h3><p>You receive a clear proposal and practical timing discussion.</p></article>
+        <article class="reveal"><span>04</span><h3>Build</h3><p>Our team completes the work with safety, quality and coordination in focus.</p></article>
       </div>
     </section>
 
@@ -100,7 +143,41 @@
         <p class="eyebrow">Why builders choose us</p>
         <h2>Built around your programme.</h2>
         <p>We understand that quality carpentry is only one part of a successful project. Communication, safety, coordination and reliable delivery matter just as much.</p>
-        <div class="checks"><span>Experienced framing team</span><span>Safety-focused work practices</span><span>Residential and high-end capability</span><span>Melbourne-wide service</span></div>
+        <div class="checks">
+          <span>Experienced framing team</span>
+          <span>Safety-focused work practices</span>
+          <span>Residential and high-end capability</span>
+          <span>Melbourne-wide service</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="areas section" id="areas">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Service areas</p>
+        <h2>Working across Melbourne.</h2>
+      </div>
+      <div class="area-layout">
+        <div class="area-list reveal">
+          <span>Tarneit</span><span>Truganina</span><span>Werribee</span><span>Point Cook</span>
+          <span>Hoppers Crossing</span><span>Wyndham Vale</span><span>Melton</span><span>Caroline Springs</span>
+          <span>Western Melbourne</span><span>Greater Melbourne</span>
+        </div>
+        <a class="map-card reveal" href="https://www.google.com/maps/search/?api=1&query=Melbourne+Victoria" target="_blank" rel="noopener">
+          <div>
+            <p class="eyebrow">Melbourne, Victoria</p>
+            <h3>View our service region</h3>
+            <span>Open Google Maps →</span>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <section class="testimonial section">
+      <div class="testimonial-card reveal">
+        <p class="eyebrow">Our standard</p>
+        <blockquote>“Quality framing is measured in the details people do not always see — accurate set-out, clean structure, reliable coordination and pride in the finished result.”</blockquote>
+        <span>JS Carpentry</span>
       </div>
     </section>
 
@@ -116,7 +193,15 @@
         <label>Full name<input name="name" required autocomplete="name"></label>
         <label>Phone<input name="phone" required autocomplete="tel"></label>
         <label>Email<input name="email" type="email" required autocomplete="email"></label>
-        <label>Service<select name="service"><option>Timber Framing</option><option>Lock-Up Carpentry</option><option>Prefabricated Framing</option><option>High-End Stick Framing</option><option>Other</option></select></label>
+        <label>Service
+          <select name="service">
+            <option>Timber Framing</option>
+            <option>Lock-Up Carpentry</option>
+            <option>Prefabricated Framing</option>
+            <option>High-End Stick Framing</option>
+            <option>Other</option>
+          </select>
+        </label>
         <label class="full">Project location<input name="location" placeholder="Suburb or site address"></label>
         <label class="full">Project details<textarea name="details" rows="5" required placeholder="Tell us about the build, timing and scope..."></textarea></label>
         <button class="button primary full" type="submit">Prepare email enquiry</button>
@@ -126,9 +211,12 @@
 
     <section class="contact section" id="contact">
       <div class="contact-card reveal">
-        <img src="logo.jpeg" alt="JS Carpentry" />
+        <img src="assets/images/logo.jpeg" alt="JS Carpentry">
         <div><p class="eyebrow">Start a conversation</p><h2>Premium framing. Straightforward service.</h2></div>
-        <div class="contact-actions"><a class="button primary" href="tel:0420170199">Call 0420 170 199</a><a class="button secondary" href="mailto:jscarpentrypvtltd@gmail.com">Send email</a></div>
+        <div class="contact-actions">
+          <a class="button primary" href="tel:0420170199">Call 0420 170 199</a>
+          <a class="button secondary" href="mailto:jscarpentrypvtltd@gmail.com">Send email</a>
+        </div>
       </div>
     </section>
   </main>
@@ -139,9 +227,27 @@
     <p>© <span id="year"></span> JS Carpentry. All rights reserved.</p>
   </footer>
 
-  <dialog class="lightbox" id="lightbox"><button aria-label="Close image">×</button><img alt="Expanded project view" /></dialog>
+  <dialog class="lightbox" id="lightbox">
+    <button aria-label="Close image">×</button>
+    <img alt="Expanded project view">
+  </dialog>
+
+  <div class="mobile-actions">
+    <a href="tel:0420170199">Call</a>
+    <a href="#quote">Quote</a>
+  </div>
+
   <button class="chat-toggle" aria-label="Open quick help">Ask JS</button>
-  <div class="chat-box" hidden><button class="chat-close" aria-label="Close quick help">×</button><strong>JS Carpentry quick help</strong><p>Choose an option:</p><a href="#services">View services</a><a href="#projects">See projects</a><a href="#quote">Request a quote</a><a href="tel:0420170199">Call us</a></div>
+  <div class="chat-box" hidden>
+    <button class="chat-close" aria-label="Close quick help">×</button>
+    <strong>JS Carpentry quick help</strong>
+    <p>Choose an option:</p>
+    <a href="#services">View services</a>
+    <a href="#projects">See projects</a>
+    <a href="#quote">Request a quote</a>
+    <a href="tel:0420170199">Call us</a>
+  </div>
+
   <script src="script.js"></script>
 </body>
 </html>
