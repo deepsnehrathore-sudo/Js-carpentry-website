@@ -20,7 +20,7 @@
 
   <header class="site-header" id="top">
     <a class="brand" href="#top" aria-label="JS Carpentry home">
-      <img src="logo.jpeg" alt="JS Carpentry logo">
+      <img src="assets/images/logo.jpeg" alt="JS Carpentry logo">
       <span>JS Carpentry</span>
     </a>
     <button class="menu-button" aria-label="Open menu" aria-expanded="false">
@@ -30,6 +30,7 @@
       <a href="#about">About</a>
       <a href="#services">Services</a>
       <a href="#projects">Projects</a>
+      <a href="#estimator">Estimator</a>
       <a href="#areas">Service areas</a>
       <a href="#contact">Contact</a>
       <a class="nav-cta" href="tel:0420170199">Call 0420 170 199</a>
@@ -38,7 +39,7 @@
 
   <main id="main">
     <section class="hero" aria-labelledby="hero-title">
-      <img class="hero-image" src="project-1.jpeg" alt="Premium architectural home project">
+      <img class="hero-image" src="assets/images/project-1.jpeg" alt="Premium architectural home project">
       <div class="hero-overlay"></div>
       <div class="hero-content reveal">
         <p class="eyebrow">Melbourne timber framing specialists</p>
@@ -50,10 +51,10 @@
         </div>
       </div>
       <div class="hero-tags">
-        <span>single story stick framing</span>
+        <span>Timber framing</span>
         <span>Lock-up</span>
-        <span>Prefab wall framing installation</span>
-        <span>High-end double story stick framing</span>
+        <span>Prefab installation</span>
+        <span>High-end stick framing</span>
       </div>
     </section>
 
@@ -106,25 +107,105 @@
 
     <section class="projects section" id="projects">
       <div class="section-heading reveal">
-        <p class="eyebrow">Selected projects</p>
-        <h2>Work that speaks through structure.</h2>
+        <p class="eyebrow">Project gallery</p>
+        <h2>Explore our framing and completed work.</h2>
       </div>
-      <div class="gallery">
-        <button class="project project-wide reveal" data-image="assets/images/project-1.jpeg" aria-label="Open luxury residence project image">
-          <img src="project-1.jpeg" alt="Completed luxury residence">
-          <span><strong>Luxury Residence</strong><small>Architectural residential project</small></span>
+
+      <div class="gallery-filters reveal" role="group" aria-label="Filter projects">
+        <button class="filter-button active" data-filter="all">All</button>
+        <button class="filter-button" data-filter="completed">Completed homes</button>
+        <button class="filter-button" data-filter="framing">Timber framing</button>
+        <button class="filter-button" data-filter="stick">Stick framing</button>
+      </div>
+
+      <div class="gallery gallery-v4">
+        <button class="project project-wide reveal" data-category="completed" data-image="assets/images/project-1.jpeg" aria-label="Open luxury residence project image">
+          <img src="assets/images/project-1.jpeg" alt="Completed luxury residence" loading="lazy">
+          <span><strong>Luxury Residence</strong><small>Completed architectural home</small></span>
         </button>
-        <button class="project reveal" data-image="assets/images/project-2.jpeg" aria-label="Open framing project image">
-          <img src="project-2.jpeg" alt="Large timber framing project viewed from above">
-          <span><strong>Custom Timber Frame</strong><small>Large-scale residential framing</small></span>
+        <button class="project reveal" data-category="framing" data-image="assets/images/project-2.jpeg" aria-label="Open timber framing project image">
+          <img src="assets/images/project-2.jpeg" alt="Large timber framing project viewed from above" loading="lazy">
+          <span><strong>Custom Timber Frame</strong><small>Large residential framing</small></span>
         </button>
-        <button class="project reveal" data-image="assets/images/project-3.jpeg" aria-label="Open stick framing project image">
-          <img src="project-3.jpeg" alt="Detailed timber roof and wall framing">
+        <button class="project reveal" data-category="stick" data-image="assets/images/project-3.jpeg" aria-label="Open stick framing project image">
+          <img src="assets/images/project-3.jpeg" alt="Detailed roof and wall framing" loading="lazy">
           <span><strong>Complex Stick Framing</strong><small>Detailed roof structure</small></span>
+        </button>
+        <button class="project reveal" data-category="framing" data-image="assets/images/project-2.jpeg" aria-label="Open prefabricated framing project image">
+          <img src="assets/images/project-2.jpeg" alt="Prefabricated wall and roof framing" loading="lazy">
+          <span><strong>Prefabricated Installation</strong><small>Wall frames and roof trusses</small></span>
+        </button>
+        <button class="project reveal" data-category="stick" data-image="assets/images/project-3.jpeg" aria-label="Open high-end framing detail">
+          <img src="assets/images/project-3.jpeg" alt="High-end timber framing detail" loading="lazy">
+          <span><strong>High-End Frame Detail</strong><small>Custom structural carpentry</small></span>
         </button>
       </div>
     </section>
 
+    <section class="estimator section" id="estimator">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Instant project estimator</p>
+        <h2>Get a rough framing budget range.</h2>
+        <p class="section-intro">This calculator gives an early, non-binding guide only. Final pricing depends on drawings, engineering, access, materials, complexity and programme.</p>
+      </div>
+
+      <div class="estimator-layout">
+        <form class="estimator-form reveal" id="estimatorForm">
+          <label>Project type
+            <select name="projectType" required>
+              <option value="standard">Standard residential frame</option>
+              <option value="prefab">Prefabricated frame installation</option>
+              <option value="highend">High-end stick framing</option>
+              <option value="lockup">Lock-up carpentry</option>
+            </select>
+          </label>
+
+          <label>Approximate floor area (m²)
+            <input name="area" type="number" min="20" max="2000" step="1" placeholder="Example: 280" required>
+          </label>
+
+          <label>Storeys
+            <select name="storeys">
+              <option value="1">Single storey</option>
+              <option value="1.18">Double storey</option>
+              <option value="1.32">Three storeys / complex levels</option>
+            </select>
+          </label>
+
+          <label>Complexity
+            <select name="complexity">
+              <option value="1">Standard</option>
+              <option value="1.18">Architectural</option>
+              <option value="1.35">Highly complex</option>
+            </select>
+          </label>
+
+          <label>Site access
+            <select name="access">
+              <option value="1">Good access</option>
+              <option value="1.08">Restricted access</option>
+              <option value="1.16">Very restricted / difficult</option>
+            </select>
+          </label>
+
+          <label>Preferred start
+            <select name="urgency">
+              <option value="1">Flexible</option>
+              <option value="1.07">Within 4–8 weeks</option>
+              <option value="1.14">Urgent</option>
+            </select>
+          </label>
+
+          <button class="button primary full" type="submit">Calculate rough range</button>
+        </form>
+
+        <aside class="estimate-result reveal" id="estimateResult" aria-live="polite">
+          <p class="eyebrow">Indicative estimate</p>
+          <h3>Enter your project details</h3>
+          <p>We will show an approximate low-to-high budget range and the next information needed for a proper quote.</p>
+        </aside>
+      </div>
+    </section>
     <section class="process section">
       <div class="section-heading reveal">
         <p class="eyebrow">How we work</p>
@@ -211,7 +292,7 @@
 
     <section class="contact section" id="contact">
       <div class="contact-card reveal">
-        <img src="logo.jpeg" alt="JS Carpentry">
+        <img src="assets/images/logo.jpeg" alt="JS Carpentry">
         <div><p class="eyebrow">Start a conversation</p><h2>Premium framing. Straightforward service.</h2></div>
         <div class="contact-actions">
           <a class="button primary" href="tel:0420170199">Call 0420 170 199</a>
@@ -237,16 +318,29 @@
     <a href="#quote">Quote</a>
   </div>
 
-  <button class="chat-toggle" aria-label="Open quick help">Ask JS</button>
-  <div class="chat-box" hidden>
-    <button class="chat-close" aria-label="Close quick help">×</button>
-    <strong>JS Carpentry quick help</strong>
-    <p>Choose an option:</p>
-    <a href="#services">View services</a>
-    <a href="#projects">See projects</a>
-    <a href="#quote">Request a quote</a>
-    <a href="tel:0420170199">Call us</a>
-  </div>
+  <button class="chat-toggle" aria-label="Open JS Carpentry assistant">Ask JS</button>
+  <section class="chat-box ai-chat" hidden aria-label="JS Carpentry assistant">
+    <div class="chat-header">
+      <div>
+        <strong>JS Carpentry Assistant</strong>
+        <small>Instant answers about services and quotes</small>
+      </div>
+      <button class="chat-close" aria-label="Close assistant">×</button>
+    </div>
+    <div class="chat-messages" id="chatMessages" aria-live="polite">
+      <div class="message bot">Hi, I can help with services, service areas, estimated pricing, project requirements and contacting JS Carpentry.</div>
+    </div>
+    <div class="quick-prompts">
+      <button data-question="What services do you offer?">Services</button>
+      <button data-question="Can I get an estimate?">Estimate</button>
+      <button data-question="What areas do you service?">Areas</button>
+      <button data-question="How do I send plans?">Send plans</button>
+    </div>
+    <form class="chat-form" id="chatForm">
+      <input id="chatInput" autocomplete="off" placeholder="Ask about your project..." aria-label="Type your question">
+      <button type="submit">Send</button>
+    </form>
+  </section>
 
   <script src="script.js"></script>
 </body>

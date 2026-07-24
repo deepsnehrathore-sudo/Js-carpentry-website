@@ -1,17 +1,26 @@
-# JS Carpentry Website — Version 3
+# JS Carpentry Website — Version 4
 
-A polished static website for JS Carpentry.
+This version adds:
 
-## Upload to GitHub
-Delete the old website files from the repository, then upload everything inside this folder while preserving the `assets/images` folder structure.
+- Filterable photo gallery
+- Instant framing budget estimator
+- Smart on-site FAQ assistant
+- Existing quote form, project lightbox, SEO and mobile layout
 
-## Vercel
-Vercel will redeploy automatically after the GitHub commit. No build command is required.
+## Important AI note
+The included assistant is a fast local website assistant that answers from JS Carpentry's approved business information. It requires no API key and works on static Vercel hosting.
 
-## Important
-The quote form opens the visitor's email app and prepares an enquiry to:
-`jscarpentrypvtltd@gmail.com`
+A generative AI chatbot that writes open-ended answers requires a secure server-side API route and an AI provider account. Never place a private API key inside `script.js` or any browser-visible file.
 
-## Contact
-- 0420 170 199
-- jscarpentrypvtltd@gmail.com
+## Estimator disclaimer
+The calculator gives a rough non-binding guide only. Final pricing requires review of plans, engineering, access, materials, scope and programme.
+
+## Upload
+Upload all files while preserving:
+
+assets/
+  images/
+    logo.jpeg
+    project-1.jpeg
+    project-2.jpeg
+    project-3.jpeg
